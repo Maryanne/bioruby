@@ -91,13 +91,13 @@ class HMMER
   def query
     cmd = [ @program, *@options ]
     cmd.concat([ @hmmfile, @seqfile ])
-      
-    report = nil
+      puts "#{cmd}"
+    #report = nil
     
-    @output = Bio::Command.query_command(cmd, nil)
-    report = parse_result(@output)
+    #@output = Bio::Command.query_command(cmd, nil)
+    #report = parse_result(@output)
       
-    return report
+    #return report
   end
 
   private
@@ -109,4 +109,5 @@ class HMMER
 end # class HMMER
 
 end # module Bio
+
 
