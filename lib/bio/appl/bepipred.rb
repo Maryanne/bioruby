@@ -15,8 +15,6 @@
 # Improved method for predicting linear B-cell epitopes.
 # Jens Erik Pontoppidan Larsen, Ole Lund and Morten Nielsen
 # Immunome Research 2:2, 2006.
-require 'rubygems'
-require 'bio'
 require 'bio/command'
 require 'shellwords'
 
@@ -39,7 +37,7 @@ class Bepipred
   autoload :Report, 'bio/appl/bepipred/report'
   
   # Creates a new Bepipred execution wrapper object
-  def initialize(program='bepipred',file_name='/usr/local/bepipred-1.0b/test/CHO.fsa')
+  def initialize(program='bepipred',file_name)
     @program = program
     @file_name = file_name
   end
@@ -75,6 +73,6 @@ class Bepipred
 end
 end
 
-
-b = Bio::Bepipred.new
-puts b.make_command()
+#How to use the script 
+#b = Bio::Bepipred.new
+#puts b.make_command()
